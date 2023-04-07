@@ -26,7 +26,7 @@ Console.WriteLine(result);*/
 
 
 
-Random random = new Random();
+/*Random random = new Random();
 
 int randomValue= random.Next(10, 100);
 
@@ -44,10 +44,16 @@ else
 {
     Console.Write(firstDigit);
     
-}
+}*/
 
 
+Random random = new Random();
 
+int randomValue= random.Next(100, 1000);
+
+int d1 = randomValue % 10;
+int d2 = randomValue / 100;
+Console.Write($"{randomValue} -> {d2}{d1}");
 
 
 
