@@ -47,13 +47,31 @@ else
 }*/
 
 
-Random random = new Random();
+/*Random random = new Random();
 
 int randomValue= random.Next(100, 1000);
 
 int d1 = randomValue % 10;
 int d2 = randomValue / 100;
-Console.Write($"{randomValue} -> {d2}{d1}");
+Console.Write($"{randomValue} -> {d2}{d1}");*/
+
+Console.WriteLine("Введите два числа:");
+
+int first = int.Parse(Console.ReadLine());
+int second = int.Parse(Console.ReadLine());
+Console.Write($"{first}, {second}");
+int ostat = first % second;
+if (first % second == 0)
+{
+    Console.Write("кратно");
+}
+else
+{
+    Console.Write($" -> не кратно, остаток {ostat}");
+}
+
+
+
 
 
 
