@@ -55,7 +55,7 @@ int d1 = randomValue % 10;
 int d2 = randomValue / 100;
 Console.Write($"{randomValue} -> {d2}{d1}");*/
 
-Console.WriteLine("Введите два числа:");
+/*Console.WriteLine("Введите два числа:");
 
 int first = int.Parse(Console.ReadLine());
 int second = int.Parse(Console.ReadLine());
@@ -68,10 +68,20 @@ if (first % second == 0)
 else
 {
     Console.Write($" -> не кратно, остаток {ostat}");
+}*/
+
+
+Console.WriteLine("Введите два числа, проверим является ли одно число квадратом другого:");
+int first = int.Parse(Console.ReadLine());
+int second = int.Parse(Console.ReadLine());
+if (first * first == second | second * second == first)
+{
+    Console.WriteLine($"{first}, {second} -> да");
 }
-
-
-
+else
+{
+    Console.WriteLine($"{first}, {second} -> нет");
+}
 
 
 
