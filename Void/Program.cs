@@ -71,7 +71,7 @@ else
 }*/
 
 
-Console.WriteLine("Введите два числа, проверим является ли одно число квадратом другого:");
+/*Console.WriteLine("Введите два числа, проверим является ли одно число квадратом другого:");
 int first = int.Parse(Console.ReadLine());
 int second = int.Parse(Console.ReadLine());
 if (first * first == second | second * second == first)
@@ -81,7 +81,19 @@ if (first * first == second | second * second == first)
 else
 {
     Console.WriteLine($"{first}, {second} -> нет");
+}*/
+
+Console.WriteLine("Введите число, проверим кратно ли оно 7 и 23:");
+int first = int.Parse(Console.ReadLine());
+if (first % 7 == 0 & first % 23 == 0)
+{
+    Console.WriteLine($"{first} -> да");
 }
+else
+{
+    Console.WriteLine($"{first} -> нет");
+}
+
 
 
 
