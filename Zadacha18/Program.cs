@@ -13,7 +13,7 @@ if (result == "0")
 
 
 
-    string GetRangeByQuater(int n)
+string GetRangeByQuater(int n)
 {
     if (n == 1)
     {
