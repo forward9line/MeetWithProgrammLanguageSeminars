@@ -26,7 +26,7 @@ int GetSumToNamber(int number)
 //Задача 28: Напишите программу, которая принимает на вход число N
 //и выдаёт произведение чисел от 1 до N.
 //4 -> 24 5 -> 120
-
+/*
 int a = int.Parse(Console.ReadLine());
 
 int proiz = GetProizToNumber(a);
@@ -42,11 +42,41 @@ int GetProizToNumber(int number)
     }
     return proiz;
 }
-
+*/
 
 //Задача 30: Напишите программу, которая выводит массив из 8 элементов,
 //заполненный нулями и единицами в случайном порядке.
 //[1,0,1,1,0,1,0,0]
+
+//int randomValue= random.Next(100, 1000);
+
+
+int[] array = new int[8];
+
+int l = array.Length;
+
+array = GetArrayRandom(l);
+
+
+for (int i = 0; i < l; i++)
+{
+    Console.Write(array[i]);
+
+}
+
+
+int[] GetArrayRandom(int n)
+{
+    int[] array1 = new int[n];
+
+    Random random = new Random();
+
+    for (int i = 0; i < n; i++)
+    {
+        array1[i] = random.Next(0, 2);
+    }
+    return array1;
+}
 
 
 
