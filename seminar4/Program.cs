@@ -56,14 +56,16 @@ int[] array = new int[8];
 int l = array.Length;
 
 array = GetArrayRandom(l);
+PrintArray();
 
-
+void PrintArray()
+{
 for (int i = 0; i < l; i++)
 {
     Console.Write(array[i]);
 
 }
-
+}
 
 int[] GetArrayRandom(int n)
 {
