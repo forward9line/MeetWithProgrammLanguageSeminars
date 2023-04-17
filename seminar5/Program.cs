@@ -89,7 +89,7 @@ return sumNegative;
 
 
 
-
+/*
 Console.WriteLine("Введите длинну массива:");
 Console.Write("L = ");
 int l = int.Parse(Console.ReadLine());
@@ -138,14 +138,70 @@ int[] GetArrayRevers(int[] array)
     return array;
 }
 
+*/
+
+//Задача 33: Задайте массив. Напишите программу, которая определяет,
+//присутствует ли заданное число в массиве.
+//4; массив [6, 7, 19, 345, 3] -> нет 3; массив [6, 7, 19, 345, 3] -> да
+
+
+Console.WriteLine("Введите длинну массива:");
+Console.Write("L = ");
+int l = int.Parse(Console.ReadLine());
 
 
 
+int[] array = GetArrayIntNunbers(l);
 
 
 
+Console.WriteLine("Введите число для поиска в массиве:");
+Console.Write("N = ");
+int n = int.Parse(Console.ReadLine());
+
+string result = GetResultFindNumber(array, n);
+
+PrintArray(array, result);
 
 
+
+int[] GetArrayIntNunbers(int l)
+{
+    Random random = new Random();
+
+    int[] array = new int[l];
+
+    for (int i = 0; i < l; i++)
+    {
+        array[i] = random.Next(0, 21);
+    }
+
+    return array;
+
+}
+
+string GetResultFindNumber(int[] array, int n)
+{
+    string result = "нет";
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] == n)
+        {
+            result = "да";
+        }
+        
+
+    }
+
+    return result;
+
+}
+
+
+void PrintArray(int[] array, string result)
+{
+    Console.WriteLine($"массив [{string.Join(" ,", array)}] -> {result}");
+}
 
 
 
