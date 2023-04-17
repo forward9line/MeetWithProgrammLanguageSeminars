@@ -1,4 +1,4 @@
-﻿//Задайте массив из 12 элементов, заполненый случайными числами [-9; 9].
+﻿/*//Задайте массив из 12 элементов, заполненый случайными числами [-9; 9].
 //Найдите сумму положительных и отрицательных элементов массива
 
 
@@ -81,6 +81,71 @@ for (int i = 0; i < array.Length; i++)
 return sumNegative;
 
 }
+*/
+
+//Задача 32: Напишите программу замена элементов массива:
+//положительные элементы замените на соответствующие отрицательные, и наоборот.
+//[-4, -8, 8, 2] -> [4, 8, -8, -2]
+
+
+
+
+Console.WriteLine("Введите длинну массива:");
+Console.Write("L = ");
+int l = int.Parse(Console.ReadLine());
+
+int[] array = GetArrayIntNunbers(l);
+
+
+PrintArray(array);
+
+int[] arrayrevers = GetArrayRevers(array);
+
+PrintArray(arrayrevers);
+
+
+
+
+int[] GetArrayIntNunbers(int l)
+{
+    Random random = new Random();
+
+    int[] array = new int[l];
+
+    for (int i = 0; i < l; i++)
+    {
+        array[i] = random.Next(-100, 101);
+    }
+
+    return array;
+
+}
+
+void PrintArray(int[] array)
+{
+    Console.WriteLine($"[{string.Join(" ,", array)}]");
+}
+
+
+
+int[] GetArrayRevers(int[] array)
+{
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = array[i] * (-1);
+    }
+    return array;
+}
+
+
+
+
+
+
+
+
+
 
 
 
