@@ -51,9 +51,14 @@ int GetProizToNumber(int number)
 //int randomValue= random.Next(100, 1000);
 
 
-int[] array = new int[8];
 
-int l = array.Length;
+int l = int.Parse(Console.ReadLine());
+
+
+
+int[] array = new int[l];
+
+
 
 array = GetArrayRandom(l);
 PrintArray();
@@ -75,7 +80,7 @@ int[] GetArrayRandom(int n)
 
     for (int i = 0; i < n; i++)
     {
-        array1[i] = random.Next(0, 2);
+        array1[i] = random.Next(5, 7);
     }
     return array1;
 }
