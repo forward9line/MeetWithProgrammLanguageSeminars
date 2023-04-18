@@ -214,7 +214,7 @@ void PrintArray(int[] array, string result)
 //[10, 11, 12, 13, 14] -> 5
 
 
-
+/*
 
 int[] array = new int[123];
 
@@ -262,6 +262,81 @@ int GetDiapazonNumber(int[] array)
 
     return n;
 }
+
+*/
+
+//Задача 37: Найдите произведение пар чисел в одномерном массиве.
+//Парой считаем первый и последний элемент, второй и предпоследний
+//и т.д. Результат запишите в новом массиве. [1 2 3 4 5] -> 5 8 3
+//[6 7 3 6] -> 36 21
+
+
+
+Console.WriteLine("Введите длинну массива:");
+Console.Write("L = ");
+int l = int.Parse(Console.ReadLine());
+
+
+
+int[] array = GetArrayIntNunbers(l);
+int[] ar = GetPowPairsNambers(array);
+if (array.Length % 2 == 0)
+{
+    PrintArray(array, ar);
+}
+else
+{
+    PrintArray2(array, ar);
+}
+
+
+int[] GetArrayIntNunbers(int l)
+{
+    Random random = new Random();
+
+    int[] array = new int[l];
+
+    for (int i = 0; i < l; i++)
+    {
+        array[i] = random.Next(1, 10);
+    }
+
+    return array;
+
+}
+
+void PrintArray(int[] array, int[] ar)
+{
+    Console.WriteLine($"[{string.Join(" ,", array)}] -> {string.Join(" ", ar)}");
+}
+
+
+void PrintArray2(int[] array, int[] ar)
+{
+    Console.WriteLine($"[{string.Join(" ,", array)}] -> {string.Join(" ", ar)} {array[array.Length / 2 ]}");
+}
+
+
+int[] GetPowPairsNambers(int[] array)
+{
+    int l = array.Length;
+
+    
+        int[] arr = new int[array.Length / 2];
+        for (int i = 0; i < array.Length / 2; i++, l--)
+        {
+            arr[i] = array[i] * array[l - 1];
+        }
+        
+    
+   
+
+    return arr;
+
+
+}
+
+
 
 
 
